@@ -1,0 +1,26 @@
+.profile {
+  object-fit: cover;
+  object-position: 100% 35%;
+  border-radius: 50%;
+  box-shadow: 0.25rem 0.5rem 2rem #193549;
+}
+
+code {
+  background-color: #dedede;
+  padding: 0.25rem 0.5rem;
+}
+
+ol {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+  font-size: 1.5rem;
+  background-color: var(--yellow);
+  margin: 0.5rem;
+  padding: 0.5rem 2rem;
+  border-radius: 2rem;
+  box-sizing: border-box;
+  width: calc(var(--level) * 1%);
+}

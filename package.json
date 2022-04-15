@@ -1,0 +1,28 @@
+{
+  "name": "resume",
+  "private": true,
+  "version": "1.0.0",
+  "repository": "https://github.com/AriPerkkio/resume",
+  "author": "Ari Perkkiö <ari.perkkio@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "live-server src",
+    "encrypt": "node scripts/encrypt.mjs",
+    "print": "node scripts/print.mjs",
+    "image2base64": "node scripts/image-to-base64.mjs",
+    "lint": "eslint . --ext .js,.mjs"
+  },
+  "dependencies": {
+    "live-server": "^1.2.1",
+    "puppeteer": "^13.5.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.13.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.6.2"
+  },
+  "prettier": {
+    "singleQuote": true
+  }
+}

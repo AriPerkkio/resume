@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>CV | Ari Perkkiö</title>
+
+    <style>
+      @font-face {
+        font-family: 'Cascadia Code';
+        src: url('/static/CascadiaCode.ttf');
+      }
+    </style>
+
+    <link rel="stylesheet" href="./styles/base.css" />
+    <link rel="stylesheet" href="./styles/component.css" />
+    <link rel="stylesheet" href="./styles/layout.css" />
+    <link rel="stylesheet" href="./styles/typography.css" />
+
+    <script src="./index.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <img
+        style="width: 25rem; height: 25rem"
+        class="profile"
+        alt=""
+        src="./static/profile.jpg"
+      />
+
+      <h1>Ari Perkkiö</h1>
+
+      <span>Frontend specialized fullstack developer</span>
+    </header>
+
+    <main>
+      <h2>Login</h2>
+
+      <p>
+        Login is required. If you think you should have a passcode, please
+        contant me at
+        <a href="mailto:ari.perkkio@gmail.com">ari.perkkio@gmail.com</a>.
+      </p>
+
+      <form onsubmit="window.loadMainContent(event)">
+        <label for="plaintext-passcode">Passcode</label>
+        <input id="plaintext-passcode" type="text" />
+
+        <button type="submit">Login</button>
+      </form>
+
+      <div role="alert" id="errors"></div>
+    </main>
+
+    <footer>
+      <h2>Contact details</h2>
+      <dl>
+        <dt>
+          <img src="./static/email.svg" alt="" />
+          Email
+        </dt>
+        <dd>
+          <a href="mailto:ari.perkkio@gmail.com">ari.perkkio@gmail.com</a>
+        </dd>
+
+        <dt>
+          <img src="./static/github.svg" alt="" />
+          Github
+        </dt>
+        <dd>
+          <a href="https://github.com/AriPerkkio"
+            >https://github.com/AriPerkkio</a
+          >
+        </dd>
+
+        <dt>
+          <img src="./static/codepen.svg" alt="" />
+          Codepen
+        </dt>
+        <dd>
+          <a href="https://codepen.io/ariperkkio/"
+            >https://codepen.io/ariperkkio/</a
+          >
+        </dd>
+
+        <dt>
+          <img src="./static/npm.svg" alt="" />
+          NPM
+        </dt>
+        <dd>
+          <a href="https://www.npmjs.com/~ariperkkio"
+            >https://www.npmjs.com/~ariperkkio</a
+          >
+        </dd>
+      </dl>
+    </footer>
+  </body>
+</html>
