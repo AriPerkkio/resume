@@ -1,6 +1,9 @@
 /** @type {import('eslint/lib/shared/types').ConfigData} */
 module.exports = {
   root: true,
+  env: {
+    es6: true,
+  },
   parserOptions: {
     ecmaVersion: 'latest',
   },
