@@ -18,7 +18,7 @@ function loadMainContent(event) {
 }
 
 function fetchMainContent(passcode) {
-  return fetch('/encrypted/main-content.html')
+  return fetch('./encrypted/main-content.html')
     .then((response) => response.text())
     .then((encryptedHtml) => decrypt(passcode, encryptedHtml))
     .then(appendToMain)
