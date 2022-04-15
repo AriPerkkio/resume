@@ -2,7 +2,7 @@ import * as fs from 'fs';
 import { getArgument } from './utils.mjs';
 
 const passcodeArg = getArgument('--passcode');
-const mainContent = fs.readFileSync('src/gitignore/main-content.html', 'utf8');
+const mainContent = fs.readFileSync('gitignore/main-content.html', 'utf8');
 const encrypted = encrypt(passcodeArg, mainContent);
 
 fs.writeFileSync('src/encrypted/main-content.html', encrypted, 'utf8');

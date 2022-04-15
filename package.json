@@ -7,6 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "live-server src",
+    "deploy": "gh-pages -d src",
     "encrypt": "node scripts/encrypt.mjs",
     "print": "node scripts/print.mjs",
     "image2base64": "node scripts/image-to-base64.mjs",
@@ -20,6 +21,7 @@
     "eslint": "^8.13.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "gh-pages": "^3.2.3",
     "prettier": "^2.6.2"
   },
   "prettier": {
