@@ -2,7 +2,7 @@
 
 > Everyone hates boring generic resumes and layouts of Microsoft Word
 
-https://github.com/AriPerkkio/resume
+https://ariperkkio.github.io/resume
 
 ## Scripts
 
