@@ -24,3 +24,50 @@ li {
   box-sizing: border-box;
   width: calc(var(--level) * 1%);
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+label[for='plaintext-passcode'],
+input#plaintext-passcode,
+button[type='submit'] {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+input#plaintext-passcode {
+  border: 2px solid black;
+  border-radius: 0.75rem;
+  background-color: rgba(0, 0, 0, 0.02);
+  box-shadow: 0 0 0.5rem 0.1rem #d3d3d3;
+  padding: 0.5rem 1rem;
+  align-self: stretch;
+  max-width: 50rem;
+}
+
+input#plaintext-passcode:hover,
+input#plaintext-passcode:focus {
+  transform: scaleY(1.05);
+  box-shadow: 0 0 0.5rem 0.25rem #d3d3d3;
+}
+
+button[type='submit'] {
+  background-color: rgba(0, 0, 0, 0.02);
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  font-size: 1.7rem;
+  font-weight: 600;
+  box-shadow: 0.1rem 0.1rem 0.25rem 0rem #000;
+}
+
+button[type='submit']:hover,
+button[type='submit']:focus {
+  transform: scale(1.05);
+  box-shadow: 0.2rem 0.2rem 0.75rem 0rem #000;
+}
+button[type='submit']:active {
+  transform: scale(0.95);
+}
