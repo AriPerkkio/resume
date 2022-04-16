@@ -48,7 +48,12 @@
 
       <form onsubmit="window.loadMainContent(event)">
         <label for="plaintext-passcode">Passcode</label>
-        <input id="plaintext-passcode" type="text" />
+        <input
+          id="plaintext-passcode"
+          type="text"
+          autocomplete="on"
+          name="passcode"
+        />
 
         <button type="submit">Login</button>
       </form>
