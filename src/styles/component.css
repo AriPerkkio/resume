@@ -55,6 +55,7 @@ input#plaintext-passcode:focus {
 }
 
 button[type='submit'] {
+  cursor: pointer;
   background-color: rgba(0, 0, 0, 0.02);
   padding: 0.5rem 1rem;
   border-radius: 0.75rem;
