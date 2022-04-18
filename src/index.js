@@ -11,8 +11,7 @@ function loadMainContent(event) {
   event.preventDefault();
 
   const passcode = document.getElementById('plaintext-passcode').value;
-  const errors = document.getElementById('errors');
-  errors.innerHTML = '';
+  setStateAndErrors({ errors: '', state: '' });
 
   fetchMainContent(passcode);
 }
@@ -20,18 +19,33 @@ function loadMainContent(event) {
 function fetchMainContent(passcode) {
   return fetch('./encrypted/main-content.html')
     .then((response) => response.text())
+    .then((response) => {
+      setStateAndErrors({ errors: '', state: 'Encrypting...' });
+      return response;
+    })
     .then((encryptedHtml) => decrypt(passcode, encryptedHtml))
     .then(appendToMain)
     .catch((e) => {
-      const errors = document.getElementById('errors');
-      errors.append(document.createTextNode('Invalid passcode'));
+      setStateAndErrors({ errors: e.message, state: '' });
       console.error(e);
     });
 }
 
+function setStateAndErrors({ errors, state }) {
+  const errorElement = document.getElementById('errors');
+  const statusElement = document.getElementById('state');
+
+  if (errorElement) {
+    errorElement.innerHTML = errors;
+  }
+  if (statusElement) {
+    statusElement.innerHTML = state;
+  }
+}
+
 function appendToMain(html) {
   if (!/This comment indicates decryption was successful/.test(html)) {
-    throw new Error(`Invalid passcode, decrypted: ${html}`);
+    throw new Error('Invalid passcode');
   }
 
   document.querySelector('main').innerHTML = html;
