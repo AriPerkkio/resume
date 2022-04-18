@@ -21,7 +21,7 @@ function fetchMainContent(passcode) {
     .then((response) => response.text())
     .then((response) => {
       setStateAndErrors({ errors: '', state: 'Encrypting...' });
-      return response;
+      return sleep(response, 200);
     })
     .then((encryptedHtml) => decrypt(passcode, encryptedHtml))
     .then(appendToMain)
@@ -66,4 +66,8 @@ function textToChars(text) {
 
 function applySaltToChar(char, passcode) {
   return textToChars(passcode).reduce((a, b) => a ^ b, char);
+}
+
+function sleep(input, ms) {
+  return new Promise((resolve) => setTimeout(() => resolve(input), ms));
 }
