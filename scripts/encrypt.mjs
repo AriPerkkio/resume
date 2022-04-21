@@ -1,12 +1,22 @@
 import * as fs from 'fs';
-import { getArgument } from './utils.mjs';
+import { compressToBase64, getArgument } from './utils.mjs';
 
 const passcodeArg = getArgument('--passcode');
 const mainContent = fs.readFileSync('gitignore/main-content.html', 'utf8');
+
+console.log('Encrypting...');
 const encrypted = encrypt(passcodeArg, mainContent);
 
-fs.writeFileSync('src/encrypted/main-content.html', encrypted, 'utf8');
-console.log('Updated src/encrypted/main-content.html');
+console.log('Compressing...');
+const compressed = compressToBase64(encrypted);
+
+console.log('\nSizes in character counts:');
+console.log(`Raw:        ${mainContent.length}`);
+console.log(`Encrypted:  ${encrypted.length}`);
+console.log(`Compressed: ${compressed.length}`);
+
+fs.writeFileSync('src/encrypted/main-content.html', compressed, 'utf8');
+console.log('\nUpdated src/encrypted/main-content.html');
 
 function encrypt(passcode, text) {
   return text
