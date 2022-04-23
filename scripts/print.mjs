@@ -11,6 +11,7 @@ await page.type('#plaintext-passcode', passcode);
 await page.click('button[type="submit"]');
 await new Promise((r) => setTimeout(r, 2000));
 
+await page.addStyleTag({ content: '.hidden-in-print{display: none}' });
 await page.setViewport({ width: 1000, height: 1000 });
 
 const { width, height } = await page.evaluate(() => ({
