@@ -1,5 +1,5 @@
 import * as fs from 'fs';
-import { getArgument } from './utils';
+import { getArgument } from './utils.mjs';
 
 const imagePath = getArgument('--path');
 const ext = imagePath.split('.').pop();
