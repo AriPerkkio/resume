@@ -1,3 +1,8 @@
+export const stylesEntryPoint = {
+  src: 'src/styles/index.scss',
+  dest: 'src/styles/index.css',
+};
+
 export function getArgument(command) {
   const args = process.argv.slice(2);
   const indexOfCommand = args.indexOf(command);

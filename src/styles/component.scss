@@ -46,12 +46,12 @@ input#plaintext-passcode {
   padding: 0.5rem 1rem;
   align-self: stretch;
   max-width: 50rem;
-}
 
-input#plaintext-passcode:hover,
-input#plaintext-passcode:focus {
-  transform: scaleY(1.05);
-  box-shadow: 0 0 0.5rem 0.25rem #d3d3d3;
+  &:hover,
+  &:focus {
+    transform: scaleY(1.05);
+    box-shadow: 0 0 0.5rem 0.25rem #d3d3d3;
+  }
 }
 
 button[type='submit'] {
@@ -62,16 +62,16 @@ button[type='submit'] {
   font-size: 1.7rem;
   font-weight: 600;
   box-shadow: 0.1rem 0.1rem 0.25rem 0rem #000;
-}
 
-button[type='submit']:hover,
-button[type='submit']:focus {
-  transform: scale(1.05);
-  box-shadow: 0.2rem 0.2rem 0.75rem 0rem #000;
-}
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+    box-shadow: 0.2rem 0.2rem 0.75rem 0rem #000;
+  }
 
-button[type='submit']:active {
-  transform: scale(0.95);
+  &:active {
+    transform: scale(0.95);
+  }
 }
 
 .download-link {
@@ -87,15 +87,15 @@ a[download] {
   display: flex;
   align-items: center;
   padding: 0.5rem 1rem;
-}
 
-a[download]:hover,
-a[download]:focus {
-  transform: scale(1.05);
-  margin-right: 0.5rem;
-}
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+    margin-right: 0.5rem;
+  }
 
-a[download] img {
-  height: 2.4rem;
-  margin-right: 0.5rem;
+  img {
+    height: 2.4rem;
+    margin-right: 0.5rem;
+  }
 }
