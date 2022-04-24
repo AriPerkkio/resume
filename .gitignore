@@ -1,5 +1,6 @@
 node_modules
+.vscode
 yarn.lock
 *.pdf
 **/gitignore/**
-.vscode
+**/styles/index.css
