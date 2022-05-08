@@ -1,8 +1,10 @@
 # resume
 
-> Everyone hates boring generic resumes and layouts of Microsoft Word
+> Password protected resume as static site with embedded PDF download.
 
 https://ariperkkio.github.io/resume
+
+<img src="https://raw.githubusercontent.com/AriPerkkio/resume/HEAD/docs/demo.jpg" width="200px">
 
 ## Scripts
 
